@@ -1,0 +1,247 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+}
+
+.container {
+    width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+
+    padding: 30px;
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #cccccc;
+    margin-bottom: 25px;
+}
+
+/* Traffic Light */
+
+.traffic-light {
+    width: 150px;
+    height: 350px;
+
+    background: #111;
+    border-radius: 30px;
+
+    margin: auto;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.light {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: #333;
+    border: 5px solid #222;
+
+    transition: 0.3s;
+}
+
+/* Active Lights */
+
+.light.active.red {
+    background: red;
+
+    box-shadow:
+        0 0 20px red,
+        0 0 50px red;
+}
+
+.light.active.yellow {
+    background: yellow;
+
+    box-shadow:
+        0 0 20px yellow,
+        0 0 50px yellow;
+}
+
+.light.active.green {
+    background: #00ff00;
+
+    box-shadow:
+        0 0 20px #00ff00,
+        0 0 50px #00ff00;
+}
+
+/* Status */
+
+.status {
+    margin-top: 20px;
+}
+
+.status h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.status p {
+    color: #dddddd;
+}
+
+/* Buttons */
+
+.controls {
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 8px;
+}
+
+button {
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#startBtn {
+    background: #28a745;
+    color: white;
+}
+
+#stopBtn {
+    background: #dc3545;
+    color: white;
+}
+
+#resetBtn {
+    background: #ffc107;
+    color: black;
+}
+
+/* Settings */
+
+.settings {
+    margin-top: 25px;
+
+    background: rgba(0, 0, 0, 0.2);
+
+    padding: 18px;
+
+    border-radius: 12px;
+}
+
+.settings h2 {
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 10px 0;
+}
+
+.input-group label {
+    width: 90px;
+    text-align: left;
+}
+
+.input-group input {
+    width: 60px;
+
+    padding: 7px;
+
+    border-radius: 5px;
+    border: none;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+.input-group span {
+    width: 70px;
+
+    text-align: left;
+
+    color: #cccccc;
+
+    font-size: 13px;
+}
+
+/* Cycle */
+
+.cycle-box {
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border-radius: 12px;
+}
+
+.cycle-box h2 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+#cycles {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Saved Message */
+
+.saved {
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    color: #aaaaaa;
+}

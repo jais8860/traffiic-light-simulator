@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Traffic Light Simulator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🚦 Traffic Light Simulator</h1>
+
+        <p class="subtitle">
+            Automatic traffic light control system
+        </p>
+
+        <!-- Traffic Light -->
+        <div class="traffic-light">
+
+            <div id="red" class="light red"></div>
+
+            <div id="yellow" class="light yellow"></div>
+
+            <div id="green" class="light green"></div>
+
+        </div>
+
+        <!-- Current State -->
+        <div class="status">
+            <h2 id="currentState">RED</h2>
+
+            <p>
+                Time Remaining:
+                <span id="timer">5</span> seconds
+            </p>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+
+            <button id="startBtn" onclick="startTraffic()">
+                ▶ Start
+            </button>
+
+            <button id="stopBtn" onclick="stopTraffic()">
+                ⏹ Stop
+            </button>
+
+            <button id="resetBtn" onclick="resetTraffic()">
+                🔄 Reset
+            </button>
+
+        </div>
+
+        <!-- Timing Settings -->
+        <div class="settings">
+
+            <h2>⏱ Light Timings</h2>
+
+            <div class="input-group">
+
+                <label>
+                    🔴 Red
+                </label>
+
+                <input
+                    type="number"
+                    id="redTime"
+                    value="5"
+                    min="1"
+                >
+
+                <span>seconds</span>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+                    🟢 Green
+                </label>
+
+                <input
+                    type="number"
+                    id="greenTime"
+                    value="5"
+                    min="1"
+                >
+
+                <span>seconds</span>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+                    🟡 Yellow
+                </label>
+
+                <input
+                    type="number"
+                    id="yellowTime"
+                    value="2"
+                    min="1"
+                >
+
+                <span>seconds</span>
+
+            </div>
+
+        </div>
+
+        <!-- Cycle Counter -->
+        <div class="cycle-box">
+
+            <h2>Completed Cycles</h2>
+
+            <div id="cycles">
+                0
+            </div>
+
+        </div>
+
+        <p class="saved">
+            💾 Data is automatically saved
+        </p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
